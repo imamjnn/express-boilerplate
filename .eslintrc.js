@@ -24,7 +24,7 @@ module.exports = {
     // eslint-plugin-import
     'import/first': 2,
     'import/newline-after-import': 2,
-    'import/no-cycle': [2, { maxDepth: 1 }],
+    'import/no-cycle': [2, {maxDepth: 1}],
     'import/no-duplicates': 2,
     'import/no-unresolved': 1,
   },

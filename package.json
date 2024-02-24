@@ -2,14 +2,16 @@
   "name": "boilerplate",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node src/index.js",
+    "start": "nodemon --exec babel-node src/app.js",
     "clean": "rm -rf dist",
     "build": "npm run clean && babel ./src --out-dir dist --copy-files",
-    "prod": "node dist/index.js",
-    "lint": "eslint ."
+    "prod": "node dist/app.js",
+    "lint": "eslint .",
+    "check-format": "npx prettier --check ./src",
+    "fix-format": "npx prettier --write ./src"
   },
   "author": "",
   "license": "ISC",
@@ -27,10 +29,9 @@
     "prettier": "^2.6.2"
   },
   "dependencies": {
-    "body-parser": "^1.20.0",
+    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
-    "express": "^4.17.3",
-    "helmet": "^5.0.2",
-    "morgan": "^1.10.0"
+    "express": "^4.18.2",
+    "helmet": "^5.1.1"
   }
 }
