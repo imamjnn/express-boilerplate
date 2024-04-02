@@ -4,6 +4,7 @@ import helmet from 'helmet';
 import cors from 'cors';
 import router from './router';
 import {rateLimit} from 'express-rate-limit';
+import compression from 'compression';
 
 const app = express();
 const port = 3000;
@@ -18,6 +19,7 @@ const limiter = rateLimit({
   },
 });
 
+app.use(compression());
 app.use(limiter);
 app.disable('x-powered-by');
 app.use(helmet());
