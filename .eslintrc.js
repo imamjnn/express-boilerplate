@@ -9,6 +9,14 @@ module.exports = {
     ecmaVersion: 13,
     sourceType: 'module',
   },
+  overrides: [
+    {
+      files: ['**/__tests__/**/*.js', '**/*.test.js'],
+      env: {
+        jest: true,
+      },
+    },
+  ],
   rules: {
     // eslint
     'comma-dangle': 'off',
